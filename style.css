@@ -79,19 +79,57 @@ footer {
     color: #666;
 }
 
+/* NAVIGATION - MODERN HEADER STYLE */
 .nav-links {
-    margin-top: 20px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
+/* Nav links as pills */
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
     font-weight: 600;
+    font-size: 0.95rem;
+
+    padding: 10px 16px;
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    transition: all 0.25s ease;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
+/* Hover effect */
 .nav-links a:hover {
-    text-decoration: underline;
+    background: white;
+    color: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Active / clicked feel */
+.nav-links a:active {
+    transform: translateY(0px);
+    box-shadow: none;
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
 }
 
 @media (max-width: 768px) {
